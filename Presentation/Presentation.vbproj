@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A5DBBE32-F922-49CE-96F0-24E99E919B8D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Presentation.My.MyApplication</StartupObject>
+    <RootNamespace>Presentation</RootNamespace>
+    <AssemblyName>Presentation</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Presentation.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Presentation.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Core, Version=1.11.5.21, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9" />
+    <Reference Include="Bunifu.UI.WinForm.BunifuShadowPanel">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2019\Bunifu UI WinForms 1.11.5.21\Bunifu.UI.WinForm.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2019\Bunifu UI WinForms 1.11.5.21\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2019\Bunifu UI WinForms 1.11.5.21\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2019\Bunifu UI WinForms 1.11.5.21\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGauge">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2019\Bunifu UI WinForms 1.11.5.21\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2019\Bunifu UI WinForms 1.11.5.21\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2019\Bunifu UI WinForms 1.11.5.21\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2019\Bunifu UI WinForms 1.11.5.21\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.4.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=4.13.0.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.13.1\lib\net45\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.7.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.Metadata.1.8.0\lib\netstandard2.0\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.1\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Transitions, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\dot-net-transitions.1.2.1.0\lib\net40-full\Transitions.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\Alquileres\FormAlquileres.Designer.vb">
+      <DependentUpon>FormAlquileres.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Alquileres\FormAlquileres.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Alquileres\FormEditAlquiler.Designer.vb">
+      <DependentUpon>FormEditAlquiler.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Alquileres\FormEditAlquiler.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Alquileres\FormNewAlquiler.Designer.vb">
+      <DependentUpon>FormNewAlquiler.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Alquileres\FormNewAlquiler.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clientes\Cobrar alquiler\FormClienteCobranza.Designer.vb">
+      <DependentUpon>FormClienteCobranza.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clientes\Cobrar alquiler\FormClienteCobranza.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clientes\Cobrar alquiler\FormListadoCobranzas.Designer.vb">
+      <DependentUpon>FormListadoCobranzas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clientes\Cobrar alquiler\FormListadoCobranzas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clientes\Cobrar alquiler\FormNuevoContador.Designer.vb">
+      <DependentUpon>FormNuevoContador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clientes\Cobrar alquiler\FormNuevoContador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clientes\FormClientes.Designer.vb">
+      <DependentUpon>FormClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clientes\FormClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clientes\Cobrar alquiler\FormCobrarAlquiler.Designer.vb">
+      <DependentUpon>FormCobrarAlquiler.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clientes\Cobrar alquiler\FormCobrarAlquiler.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clientes\FormEditCliente.Designer.vb">
+      <DependentUpon>FormEditCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clientes\FormEditCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clientes\FormNewCliente.Designer.vb">
+      <DependentUpon>FormNewCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clientes\FormNewCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contadores\FormNewContador.Designer.vb">
+      <DependentUpon>FormNewContador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contadores\FormNewContador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Equipos\FormEditEquipo.Designer.vb">
+      <DependentUpon>FormEditEquipo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Equipos\FormEditEquipo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Equipos\FormEquipos.Designer.vb">
+      <DependentUpon>FormEquipos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Equipos\FormEquipos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Equipos\FormNewEquipo.Designer.vb">
+      <DependentUpon>FormNewEquipo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Equipos\FormNewEquipo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\FormEditLocalidad.Designer.vb">
+      <DependentUpon>FormEditLocalidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\FormEditLocalidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\FormExtras.Designer.vb">
+      <DependentUpon>FormExtras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\FormExtras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\FormNewLocalidad.Designer.vb">
+      <DependentUpon>FormNewLocalidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\FormNewLocalidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Facturas\FormFacturas.Designer.vb">
+      <DependentUpon>FormFacturas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Facturas\FormFacturas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Facturas\FormNewFactura.Designer.vb">
+      <DependentUpon>FormNewFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Facturas\FormNewFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Facturas\FormReportesFacturas.Designer.vb">
+      <DependentUpon>FormReportesFacturas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Facturas\FormReportesFacturas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormHome.Designer.vb">
+      <DependentUpon>FormHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormHome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLogin.Designer.vb">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MessageBox\FormError.Designer.vb">
+      <DependentUpon>FormError.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MessageBox\FormError.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MessageBox\FormWarning.Designer.vb">
+      <DependentUpon>FormWarning.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MessageBox\FormWarning.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MessageBox\FormSuccess.Designer.vb">
+      <DependentUpon>FormSuccess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MessageBox\FormSuccess.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pagos\FormNewPago.Designer.vb">
+      <DependentUpon>FormNewPago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pagos\FormNewPago.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pagos\FormPagos.Designer.vb">
+      <DependentUpon>FormPagos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pagos\FormPagos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pagos\FormReportesCobros.Designer.vb">
+      <DependentUpon>FormReportesCobros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pagos\FormReportesCobros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Proveedores\FormEditProveedor.Designer.vb">
+      <DependentUpon>FormEditProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Proveedores\FormEditProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Proveedores\FormNewProveedor.Designer.vb">
+      <DependentUpon>FormNewProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Proveedores\FormNewProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Proveedores\Pedidos\FormCantRepuestos.Designer.vb">
+      <DependentUpon>FormCantRepuestos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Proveedores\Pedidos\FormCantRepuestos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Proveedores\Pedidos\FormOpcionesFormato.Designer.vb">
+      <DependentUpon>FormOpcionesFormato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Proveedores\Pedidos\FormOpcionesFormato.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Proveedores\Pedidos\FormPedido.Designer.vb">
+      <DependentUpon>FormPedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Proveedores\Pedidos\FormPedido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Proveedores\FormProveedores.Designer.vb">
+      <DependentUpon>FormProveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Proveedores\FormProveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Repuestos\FormEditRepuesto.Designer.vb">
+      <DependentUpon>FormEditRepuesto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Repuestos\FormEditRepuesto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Repuestos\FormIndicarProv.Designer.vb">
+      <DependentUpon>FormIndicarProv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Repuestos\FormIndicarProv.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Repuestos\FormNewRepuesto.Designer.vb">
+      <DependentUpon>FormNewRepuesto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Repuestos\FormNewRepuesto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Repuestos\FormRepuestos.Designer.vb">
+      <DependentUpon>FormRepuestos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Repuestos\FormRepuestos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Repuestos\Repuesto-Proveedor\FormEditRepuestoProveedor.Designer.vb">
+      <DependentUpon>FormEditRepuestoProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Repuestos\Repuesto-Proveedor\FormEditRepuestoProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Repuestos\Repuesto-Proveedor\FormNewRepuestoProveedor.Designer.vb">
+      <DependentUpon>FormNewRepuestoProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Repuestos\Repuesto-Proveedor\FormNewRepuestoProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Servicios\DetalleServicio\FormDetalles.Designer.vb">
+      <DependentUpon>FormDetalles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Servicios\DetalleServicio\FormDetalles.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Servicios\FormCantRep.Designer.vb">
+      <DependentUpon>FormCantRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Servicios\FormCantRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Servicios\FormEditServicio.Designer.vb">
+      <DependentUpon>FormEditServicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Servicios\FormEditServicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Servicios\FormNewServicio.Designer.vb">
+      <DependentUpon>FormNewServicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Servicios\FormNewServicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Servicios\FormServicios.Designer.vb">
+      <DependentUpon>FormServicios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Servicios\FormServicios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\FormNewUser.Designer.vb">
+      <DependentUpon>FormNewUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\FormNewUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\FormRecuperarContraseña.Designer.vb">
+      <DependentUpon>FormRecuperarContraseña.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\FormRecuperarContraseña.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\FormUser.Designer.vb">
+      <DependentUpon>FormUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\FormUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Supports\DataValidation.vb" />
+    <Compile Include="Supports\ExportarOffice.vb" />
+    <Compile Include="Supports\ValidacionesExtras.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Alquileres\FormAlquileres.resx">
+      <DependentUpon>FormAlquileres.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Alquileres\FormEditAlquiler.resx">
+      <DependentUpon>FormEditAlquiler.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Alquileres\FormNewAlquiler.resx">
+      <DependentUpon>FormNewAlquiler.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clientes\Cobrar alquiler\FormClienteCobranza.resx">
+      <DependentUpon>FormClienteCobranza.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clientes\Cobrar alquiler\FormListadoCobranzas.resx">
+      <DependentUpon>FormListadoCobranzas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clientes\Cobrar alquiler\FormNuevoContador.resx">
+      <DependentUpon>FormNuevoContador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clientes\FormClientes.resx">
+      <DependentUpon>FormClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clientes\Cobrar alquiler\FormCobrarAlquiler.resx">
+      <DependentUpon>FormCobrarAlquiler.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clientes\FormEditCliente.resx">
+      <DependentUpon>FormEditCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clientes\FormNewCliente.resx">
+      <DependentUpon>FormNewCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contadores\FormNewContador.resx">
+      <DependentUpon>FormNewContador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Equipos\FormEditEquipo.resx">
+      <DependentUpon>FormEditEquipo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Equipos\FormEquipos.resx">
+      <DependentUpon>FormEquipos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Equipos\FormNewEquipo.resx">
+      <DependentUpon>FormNewEquipo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\FormEditLocalidad.resx">
+      <DependentUpon>FormEditLocalidad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\FormExtras.resx">
+      <DependentUpon>FormExtras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\FormNewLocalidad.resx">
+      <DependentUpon>FormNewLocalidad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Facturas\FormFacturas.resx">
+      <DependentUpon>FormFacturas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Facturas\FormNewFactura.resx">
+      <DependentUpon>FormNewFactura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Facturas\FormReportesFacturas.resx">
+      <DependentUpon>FormReportesFacturas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormHome.resx">
+      <DependentUpon>FormHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLogin.resx">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessageBox\FormError.resx">
+      <DependentUpon>FormError.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessageBox\FormWarning.resx">
+      <DependentUpon>FormWarning.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessageBox\FormSuccess.resx">
+      <DependentUpon>FormSuccess.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pagos\FormNewPago.resx">
+      <DependentUpon>FormNewPago.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pagos\FormPagos.resx">
+      <DependentUpon>FormPagos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pagos\FormReportesCobros.resx">
+      <DependentUpon>FormReportesCobros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Proveedores\FormEditProveedor.resx">
+      <DependentUpon>FormEditProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Proveedores\FormNewProveedor.resx">
+      <DependentUpon>FormNewProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Proveedores\Pedidos\FormCantRepuestos.resx">
+      <DependentUpon>FormCantRepuestos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Proveedores\Pedidos\FormOpcionesFormato.resx">
+      <DependentUpon>FormOpcionesFormato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Proveedores\Pedidos\FormPedido.resx">
+      <DependentUpon>FormPedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Proveedores\FormProveedores.resx">
+      <DependentUpon>FormProveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Repuestos\FormEditRepuesto.resx">
+      <DependentUpon>FormEditRepuesto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Repuestos\FormIndicarProv.resx">
+      <DependentUpon>FormIndicarProv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Repuestos\FormNewRepuesto.resx">
+      <DependentUpon>FormNewRepuesto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Repuestos\FormRepuestos.resx">
+      <DependentUpon>FormRepuestos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Repuestos\Repuesto-Proveedor\FormEditRepuestoProveedor.resx">
+      <DependentUpon>FormEditRepuestoProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Repuestos\Repuesto-Proveedor\FormNewRepuestoProveedor.resx">
+      <DependentUpon>FormNewRepuestoProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Servicios\DetalleServicio\FormDetalles.resx">
+      <DependentUpon>FormDetalles.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Servicios\FormCantRep.resx">
+      <DependentUpon>FormCantRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Servicios\FormEditServicio.resx">
+      <DependentUpon>FormEditServicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Servicios\FormNewServicio.resx">
+      <DependentUpon>FormNewServicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Servicios\FormServicios.resx">
+      <DependentUpon>FormServicios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\FormNewUser.resx">
+      <DependentUpon>FormNewUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\FormRecuperarContraseña.resx">
+      <DependentUpon>FormRecuperarContraseña.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\FormUser.resx">
+      <DependentUpon>FormUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\InformeCobros.rdlc" />
+    <EmbeddedResource Include="Reportes\InformeFactura.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\Domain.CobrosPorPeriodo.datasource" />
+    <None Include="My Project\DataSources\Domain.FacturasPorPeriodo.datasource" />
+    <None Include="My Project\DataSources\Domain.ListadoCobros.datasource" />
+    <None Include="My Project\DataSources\Domain.ListadoFacturas.datasource" />
+    <None Include="My Project\DataSources\Domain.ReportesCobros.datasource" />
+    <None Include="My Project\DataSources\Domain.ReportesFacturas.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.vbproj">
+      <Project>{da4c89b4-b6fe-4ce8-8e91-10101877ea82}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\Domain.vbproj">
+      <Project>{636b67bf-9e40-4bd8-87e7-7df8b9a4cc0d}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
